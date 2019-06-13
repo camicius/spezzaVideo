@@ -26,7 +26,7 @@ with open(filename, 'rb') as csvfile:
 	for row in reader:
 		
 		filenum=row[0]
-		if filenum=="numero": continue
+		if filenum=="nomefile": continue
 		minstart=row[1]
 		secstart=row[2]
 		durata=row[3]
