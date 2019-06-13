@@ -41,7 +41,6 @@ with open(filename, 'rb') as csvfile:
 			print "esiste " + outfilename
 			continue
 		command='avconv -y  -ss 00:'+minstart+':'+secstart+' -i '+filedir+filenum+'.mov  -t '+durata+' -codec copy '+outfilename
-		print "###########################"+outfilename
 		
 		if dummy:
 			print command
