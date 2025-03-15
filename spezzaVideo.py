@@ -38,12 +38,12 @@ with open(filename, 'rb') as csvfile:
 		outfilename=outdir+nome+'.mov'
 		fh.write("file "+outfilename+"\n")
 		if os.path.isfile(outfilename) : 
-			print "esiste " + outfilename
+			print ("esiste " + outfilename)
 			continue
 		command='avconv -y  -ss 00:'+minstart+':'+secstart+' -i '+filedir+filenum+'.mov  -t '+durata+' -codec copy '+outfilename
 		
 		if dummy:
-			print command
+			print (command)
 		else:
 			os.system(command)
 fh.close()
@@ -51,8 +51,8 @@ sys.exit()
 mergefile=filename[0:-4]+".MOV"
 commandMerge="ffmpeg -safe 0 -f concat -i "+outfile+" -vcodec copy -acodec copy "+mergefile
 if dummy:
-	print commandMerge
+	print (commandMerge)
 else:
-	print commandMerge
+	print (commandMerge)
 	os.system(commandMerge)
 
